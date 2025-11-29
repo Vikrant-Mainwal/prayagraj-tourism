@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prayagraj Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-white">
+    <Navbar client:load />
+
+    <main class="min-h-screen pt-20">
+      <slot />
+    </main>
+
+    <Footer client:load />
+  </body>
+</html>
