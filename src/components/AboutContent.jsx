@@ -67,7 +67,7 @@ export default function AboutContent() {
               key={i}
               className="bg-white border rounded-lg p-8 shadow-md hover:shadow-xl transition"
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-red-100 text-red-600 mb-6">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-red-100 text-[#bd6628e6] mb-6">
                 <section.icon className="h-7 w-7" />
               </div>
 
@@ -94,13 +94,13 @@ export default function AboutContent() {
                 
                 {/* Year */}
                 <div className="w-32 text-right">
-                  <span className="text-sm font-semibold text-red-600">
+                  <span className="text-sm font-semibold text-[#bd6628e6]">
                     {m.period}
                   </span>
                 </div>
 
                 {/* Dot */}
-                <div className="w-3 h-3 rounded-full bg-red-600 mt-2" />
+                <div className="w-3 h-3 rounded-full bg-[#bd6628e6] mt-2" />
 
                 {/* Event */}
                 <div className="flex-1">

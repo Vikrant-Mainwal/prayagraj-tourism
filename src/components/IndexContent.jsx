@@ -1,6 +1,9 @@
 import Hero from "../components/Hero.jsx";
 import PlaceCard from "../components/PlaceCard.jsx";
 import { ChevronRight, Landmark, Users, Calendar } from "lucide-react";
+import Triveni from "../assets/triveni-sangam1.jpg";
+import AllahabadFort from "../assets/allahabad-fort.jpg";
+import KhusroBagh from "../assets/khusro-bagh.jpg";
 
 export default function IndexContent() {
   const featuredAttractions = [
@@ -9,7 +12,7 @@ export default function IndexContent() {
       description:
         "The sacred confluence of the Ganga, Yamuna and mystical Saraswati. A pilgrimage site of immense spiritual significance.",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Triveni_Sangam_Allahabad_2019.jpg",
+        Triveni,
       location: "Sangam Area",
     },
     {
@@ -17,7 +20,7 @@ export default function IndexContent() {
       description:
         "A magnificent Mughal fort built by Emperor Akbar in 1583. Home to the Ashoka Pillar and Akshayavat tree.",
       image:
-        "https://www.optimatravels.com/images/allahabad-images/allahabad-fort-head.jpg",
+        AllahabadFort,
       location: "Near Sangam",
     },
     {
@@ -25,7 +28,7 @@ export default function IndexContent() {
       description:
         "A stunning Mughal garden complex with historic tombs and breathtaking sandstone carvings.",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/5/57/Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg",
+        KhusroBagh,
       location: "Civil Lines",
     },
   ];
@@ -74,7 +77,7 @@ export default function IndexContent() {
                 key={index}
                 className="text-center p-6 rounded-lg border bg-white shadow hover:shadow-lg transition"
               >
-                <div className="w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-red-100 text-red-600 mb-4">
+                <div className="w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-red-100 text-[#bd6628e6] mb-4">
                   <h.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">
@@ -99,7 +102,7 @@ export default function IndexContent() {
             </div>
 
             <a
-              href="/attractions"
+              href="/places"
               className="mt-4 sm:mt-0 inline-flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100 transition"
             >
               View All <ChevronRight className="h-4 w-4" />
@@ -116,7 +119,7 @@ export default function IndexContent() {
           {/* Mobile Button */}
           <div className="text-center mt-8 sm:hidden">
             <a
-              href="/attractions"
+              href="/places"
               className="inline-flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100 transition"
             >
               View All Attractions <ChevronRight className="h-4 w-4" />
@@ -139,7 +142,7 @@ export default function IndexContent() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
+              className="px-6 py-3 bg-white text-[#bd6628e6] font-semibold rounded-lg shadow hover:bg-gray-100 transition"
             >
               Contact Us
             </a>

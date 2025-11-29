@@ -1,13 +1,14 @@
 import { ChevronRight } from "lucide-react";
+import Triveni from "../assets/triveni-sangam1.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full">
 
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://prayagrajsangam.in/wp-content/uploads/2025/02/triveni-sangam.jpeg"
+          src={Triveni.src}
           alt="Prayagraj Triveni Sangam"
           className="w-full h-full object-cover"
         />

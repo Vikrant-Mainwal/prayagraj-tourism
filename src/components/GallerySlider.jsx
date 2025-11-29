@@ -22,7 +22,7 @@ export default function GallerySlider({ images }) {
       {/* Main Image */}
       <div className="relative h-[500px] md:h-[600px] overflow-hidden rounded-lg">
         <img
-          src={images[currentIndex].src}
+          src={images[currentIndex].src.src}
           alt={images[currentIndex].alt}
           className="w-full h-full object-cover animate-fade-in"
         />
@@ -68,14 +68,14 @@ export default function GallerySlider({ images }) {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`relative h-20 rounded overflow-hidden border-2 transition-all duration-200 ${
+            className={`relative h-20 rounded border-2 transition-all duration-200 ${
               index === currentIndex
                 ? "border-primary scale-105"
                 : "border-transparent opacity-60 hover:opacity-100"
             }`}
           >
             <img
-              src={image.src}
+              src={image.src.src}
               alt={image.alt}
               className="w-full h-full object-cover"
             />

@@ -1,4 +1,10 @@
 import PlaceCard from "../components/PlaceCard.jsx";
+import Triveni from "../assets/triveni-sangam1.jpg";
+import AllahabadFort from "../assets/allahabad-fort.jpg";
+import KhusroBagh from "../assets/khusro-bagh.jpg";
+import AnandBhavan from "../assets/anand-bhavan.jpg";
+import ChandrashekharAzadPark from "../assets/azad-park.jpg";
+import AllahabadMuseum from "../assets/museum.jpg";
 
 export default function AttractionsContent() {
   const attractions = [
@@ -7,7 +13,7 @@ export default function AttractionsContent() {
       description:
         "The holiest site in Prayagraj where three sacred rivers converge...",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Triveni_Sangam_Allahabad_2019.jpg",
+        Triveni,
       location: "Sangam Area",
     },
     {
@@ -15,7 +21,7 @@ export default function AttractionsContent() {
       description:
         "Built by Emperor Akbar in 1583, this magnificent fort showcases Mughal architecture...",
       image:
-        "https://www.optimatravels.com/images/allahabad-images/allahabad-fort-head.jpg",
+       AllahabadFort,
       location: "Near Sangam",
     },
     {
@@ -23,7 +29,7 @@ export default function AttractionsContent() {
       description:
         "A stunning example of Mughal garden architecture with three royal tombs...",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/5/57/Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg",
+       KhusroBagh,
       location: "Civil Lines",
     },
     {
@@ -31,14 +37,14 @@ export default function AttractionsContent() {
       description:
         "The ancestral home of the Nehru family, now a museum of India's freedom struggle...",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Anand_Bhawan_in_Allahabad_03.jpg",
+        AnandBhavan,
       location: "Colonelganj",
     },
     {
       title: "Chandrashekhar Azad Park",
       description:
         "Historic 133-acre park with monuments, library, and lush gardens...",
-      image: "https://pbs.twimg.com/media/EBvTvfZUwAEUJPV.jpg",
+      image: ChandrashekharAzadPark,
       location: "Civil Lines",
     },
     {
@@ -46,10 +52,11 @@ export default function AttractionsContent() {
       description:
         "A major museum with sculptures, paintings, artifacts, and freedom movement memorabilia...",
       image:
-        "https://www.uptourism.gov.in/site/writereaddata/siteContent/202004061423295652museum.jpg",
+        AllahabadMuseum,
       location: "Kamla Nehru Road",
     },
   ];
+  console.log(attractions);
 
   return (
     <div className="min-h-screen pt-28 pb-16 bg-white">

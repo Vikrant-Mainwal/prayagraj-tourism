@@ -15,13 +15,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b shadow">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md h-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-red-600">Prayagraj</div>
-            <span className="hidden sm:inline text-sm text-gray-600">
+            <div className="text-2xl font-bold text-[#bd6628e6]">Prayagraj</div>
+            <span className="hidden sm:inline text-sm text-[#e48c4ee6]">
               Heritage & Culture
             </span>
           </a>
@@ -32,8 +32,8 @@ export default function Navbar() {
               <NavLink
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 rounded-md text-gray-700 hover:text-red-600 hover:bg-gray-100 transition"
-                activeClassName="text-red-600 font-bold"
+                className="px-4 py-2 rounded-md text-gray-700 hover:text-[#bd6628e6] hover:bg-gray-100 transition"
+                activeClassName="text-[#bd6628e6] font-bold"
               >
                 {link.label}
               </NavLink>
@@ -42,7 +42,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded hover:bg-gray-100"
+            className="flex md:hidden p-2 rounded hover:bg-gray-100"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -51,13 +51,13 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 animate-slide-up">
+          <div className="flex md:hidden pb-4 animate-slide-up">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 rounded-md text-gray-700 hover:text-red-600 hover:bg-gray-100 transition"
+                  className="px-4 py-2 rounded-md text-gray-700 hover:text-[#bd6628e6] hover:bg-gray-100 transition"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

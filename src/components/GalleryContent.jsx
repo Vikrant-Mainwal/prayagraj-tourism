@@ -1,34 +1,40 @@
 import GallerySlider from "../components/GallerySlider.jsx";
+import Triveni from "../assets/triveni-sangam1.jpg";
+import AllahabadFort from "../assets/allahabad-fort.jpg";
+import KhusroBagh from "../assets/khusro-bagh.jpg";
+import AnandBhavan from "../assets/anand-bhavan.jpg";
+import ChandrashekharAzadPark from "../assets/azad-park.jpg";
+import AllahabadMuseum from "../assets/museum.jpg";
 
 export default function GalleryContent() {
   const galleryImages = [
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Triveni_Sangam_Allahabad_2019.jpg",
+      src: Triveni,
       alt: "Triveni Sangam - Sacred Confluence",
       title: "Triveni Sangam - Sacred Confluence",
     },
     {
-      src: "https://www.optimatravels.com/images/allahabad-images/allahabad-fort-head.jpg",
+      src: AllahabadFort,
       alt: "Allahabad Fort",
       title: "Allahabad Fort - Mughal Grandeur",
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/5/57/Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg",
+      src: KhusroBagh,
       alt: "Khusro Bagh",
       title: "Khusro Bagh - Mughal Garden Complex",
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Anand_Bhawan_in_Allahabad_03.jpg",
+      src: AnandBhavan,
       alt: "Anand Bhavan",
       title: "Anand Bhavan - Nehru Family Home",
     },
     {
-      src: "https://pbs.twimg.com/media/EBvTvfZUwAEUJPV.jpg",
+      src: ChandrashekharAzadPark,
       alt: "Chandrashekhar Azad Park",
       title: "Chandrashekhar Azad Park - Historic Gardens",
     },
     {
-      src: "https://www.uptourism.gov.in/site/writereaddata/siteContent/202004061423295652museum.jpg",
+      src: AllahabadMuseum,
       alt: "Allahabad Museum",
       title: "Allahabad Museum - Cultural Heritage",
     },
@@ -62,7 +68,7 @@ export default function GalleryContent() {
           {galleryImages.map((image, index) => (
             <div className="relative aspect-square rounded-lg overflow-hidden group" key={index}>
               <img
-                src={image.src}
+                src={image.src.src}
                 alt={image.alt}
                 className="object-cover w-full h-full group-hover:scale-110 transition duration-500"
               />

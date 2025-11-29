@@ -88,7 +88,7 @@ export default function HeritageContent() {
               className="border rounded-xl bg-white shadow p-8 md:p-12 hover:shadow-xl transition"
             >
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-red-100 text-[#bd6628e6] flex items-center justify-center">
                   <category.icon className="h-8 w-8" />
                 </div>
                 <div>
@@ -99,14 +99,14 @@ export default function HeritageContent() {
                     {category.description}
                   </p>
 
-                  <h3 className="font-semibold text-red-600 uppercase text-xs tracking-wider mb-2">
+                  <h3 className="font-semibold text-[#bd6628e6] uppercase text-xs tracking-wider mb-2">
                     Key Highlights
                   </h3>
 
                   <ul className="space-y-2">
                     {category.highlights.map((h, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-red-600 mr-2 mt-1">→</span>
+                        <span className="text-[#bd6628e6] mr-2 mt-1">→</span>
                         <span className="text-gray-700">{h}</span>
                       </li>
                     ))}

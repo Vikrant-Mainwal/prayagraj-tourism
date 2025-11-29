@@ -71,7 +71,7 @@ export default function ContactContent() {
 
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex gap-4 mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 text-red-600">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 text-[#bd6628e6]">
                     <item.icon className="h-6 w-6" />
                   </div>
 
@@ -156,7 +156,7 @@ export default function ContactContent() {
 
                 <button
                   type="submit"
-                  className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-red-700 transition"
+                  className="w-full bg-[#bd6628e6] text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#5c3417e6] transition cursor-pointer"
                 >
                   Send Message
                   <Send className="h-4 w-4" />
