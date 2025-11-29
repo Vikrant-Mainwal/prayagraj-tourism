@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
         <div className="max-w-3xl text-white animate-fade-in">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight cinzel-font">
             Welcome to Prayagraj
           </h1>
 

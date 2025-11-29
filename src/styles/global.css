@@ -1,13 +1,7 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* @layer base {
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;
-  }
-} */
+.cinzel-font {
+  font-family: 'Cinzel', serif;
+}
 
