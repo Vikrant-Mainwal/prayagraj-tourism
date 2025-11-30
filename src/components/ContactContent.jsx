@@ -8,15 +8,39 @@ export default function ContactContent() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setLoading(false);
+      setSuccess(response.ok);
+      if (response.ok) {
+        alert("Message Sent Successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Something went wrong. Try again.");
+      }
+  }catch (error) {
+      console.error("Error sending message:", error);
+      setLoading(false);
+      setSuccess(false);
+    }
+  }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message Sent! Thank you for contacting us.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactInfo = [
@@ -163,7 +187,7 @@ export default function ContactContent() {
                   type="submit"
                   className="w-full bg-[#bd6628e6] text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#5c3417e6] transition cursor-pointer"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}                  
                   <Send className="h-4 w-4" />
                 </button>
               </form>

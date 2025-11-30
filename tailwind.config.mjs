@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/**/*.{astro,html,js,jsx,ts,tsx}",   // Main src directory
-    "./components/**/*.{js,jsx,ts,tsx,astro}", // Your components folder
-    "./pages/**/*.{astro,html}",               // Pages if outside src
-    "./layouts/**/*.{astro,html}",             // Layout folder if exists
+    "./src/**/*.{astro,html,js,jsx,ts,tsx}",  
+    "./components/**/*.{js,jsx,ts,tsx,astro}", 
+    "./pages/**/*.{astro,html}",               
+    "./layouts/**/*.{astro,html}",            
   ],
 
   theme: {

@@ -2,17 +2,14 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import Loader from "../components/Loader";
+import Loader from "../components/Loader.jsx";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Prayagraj Tourism</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,11 +18,11 @@ import Loader from "../components/Loader";
     />
   </head>
 
-  <body class="bg-white">
+  <body class="bg-white min-h-screen">
     <Loader client:load />
     <Navbar client:load />
 
-    <main class="min-h-screen pt-20">
+    <main class="pt-20 min-h-screen">
       <slot />
     </main>
 

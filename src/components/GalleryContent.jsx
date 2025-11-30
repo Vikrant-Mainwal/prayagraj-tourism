@@ -81,7 +81,7 @@ export default function GalleryContent() {
 
         {/* Footer Info Box */}
         <div className="max-w-3xl mx-auto mt-16">
-          <div className="border rounded-lg shadow p-8 bg-white text-center">
+          <div className="border border-zinc-200 rounded-lg shadow-lg p-8 bg-white text-center">
             <p className="text-gray-600">
               These images reflect the authentic beauty of Prayagraj. For high-resolution photographs,
               media usage, or permissions, kindly contact the tourism office.
