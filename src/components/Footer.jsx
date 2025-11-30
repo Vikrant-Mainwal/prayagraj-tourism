@@ -18,9 +18,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div className="text-center md:text-start">
-            <h3 className="text-xl font-bold text-primary mb-4 text-white">
+            <h5 className="text-xl font-bold text-primary mb-4 text-white">
               Prayagraj Tourism
-            </h3>
+            </h5>
             <p className="text-muted-foreground text-sm leading-relaxed text-white px-5">
               Discover the spiritual and cultural heritage of Prayagraj, one of
               India's most sacred cities. Experience the confluence of history,
