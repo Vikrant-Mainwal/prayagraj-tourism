@@ -51,8 +51,8 @@ export default function AboutContent() {
         </div>
 
         {/* INTRO */}
-        <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-8 md:p-12 mb-20 w-4xl mx-auto">
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+        <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-8 md:p-12 mb-20 max-w-4xl mx-auto">
+          <p className="text-gray-700 text-lg leading-relaxed mb-6 open-sans-font">
             Prayagraj, known as Prayag in ancient times and Allahabad during the Mughal and British era, is one of India’s most culturally and spiritually significant cities. Situated at the confluence of the Ganga, Yamuna, and the mythical Saraswati rivers, it has been a center of civilization for thousands of years.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">

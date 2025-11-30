@@ -1,21 +1,28 @@
-@import 'tailwindcss';
-
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
 .cinzel-font {
   font-family: 'Cinzel', serif;
+}
+.open-sans-font {
+  font-family: 'Open Sans', serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Cinzel', serif;
 }
-p{
-  font-family: 'Open-Sans', serif;
+
+p {
+  font-family: 'Open Sans', serif;
 }
 
+/* text animation */
 @theme {
-  --animate-typing: typing var(--typing-speed, 4s) steps(var(--steps, 20)) infinite,
+  --typing-speed: 4s;
+  --steps: 20;
+  --typing-width: 20ch;
+
+  --animate-typing: typing var(--typing-speed) steps(var(--steps)) infinite,
                     blink .7s step-end infinite;
 }
 
@@ -26,11 +33,10 @@ p{
   animation: var(--animate-typing);
 }
 
-/* Keyframes (width controlled externally) */
 @keyframes typing {
   0% { width: 0ch; }
-  40% { width: var(--typing-width, 20ch); }
-  60% { width: var(--typing-width, 20ch); }
+  40% { width: var(--typing-width); }
+  60% { width: var(--typing-width); }
   100% { width: 0ch; }
 }
 

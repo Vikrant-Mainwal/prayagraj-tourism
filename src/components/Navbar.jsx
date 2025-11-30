@@ -1,39 +1,69 @@
-import { useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { Menu, X } from "lucide-react";
-import NavLink from "../components/NavLink.jsx";
+import NavLink from "./NavLink.jsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  const [pathName, setPathName] = useState("/");
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/places", label: "Attractions" },
-    { href: "/heritage", label: "Heritage" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/contact", label: "Contact" },
-  ];
+  useEffect(() => {
+    setPathName(window.location.pathname);
+  }, []);
+
+  const navLinks = useMemo(
+    () => [
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About" },
+      { href: "/places", label: "Attractions" },
+      { href: "/heritage", label: "Heritage" },
+      { href: "/gallery", label: "Gallery" },
+      { href: "/contact", label: "Contact" },
+    ],
+    []
+  );
+
+
+  // Click outside to close mobile menu
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md h-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="w-full h-[90px] fixed top-0 z-50 bg-white shadow-md">
+      <div
+        className={`w-full h-[90px] bg-white transition-transform duration-1000 ease-out
+        flex items-center`}
+      >
+        <div className="max-w-7xl mx-auto flex justify-between items-center w-full px-6">
+
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-[#bd6628e6]">Prayagraj</div>
-            <span className="hidden sm:inline text-sm text-[#e48c4ee6]">
+          <a href="/" className="flex items-center gap-2">
+            <span className="text-2xl font-extrabold text-[#bd6628]">Prayagraj</span>
+            <span className="hidden sm:block text-sm text-[#e48c4e]">
               Heritage & Culture
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 rounded-md text-gray-700 hover:text-[#bd6628e6] hover:bg-gray-100 transition"
-                activeClassName="text-[#bd6628e6] font-bold"
+                className="px-3 py-2 text-[1rem] rounded-md text-gray-700 hover:text-[#bd6628] hover:bg-gray-100 transition"
+                activeClassName={
+                  pathName === link.href
+                    ? "text-[#bd6628] font-bold bg-gray-100"
+                    : ""
+                }
               >
                 {link.label}
               </NavLink>
@@ -43,30 +73,54 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             className="flex md:hidden p-2 rounded hover:bg-gray-100"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(true)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Menu className="h-6 w-6" />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="flex md:hidden pb-4 animate-slide-up">
-            <div className="flex flex-col space-y-2">
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/50 z-40 md:hidden">
+          <div
+            ref={menuRef}
+            className="absolute top-0 right-0 bg-white w-[80vw] max-w-[300px] h-screen shadow-xl
+                       p-6 flex flex-col justify-between animate-slide-left"
+          >
+            {/* Header */}
+            <div className="flex justify-between items-center mb-8">
+              <span className="text-2xl font-bold text-[#bd6628]">Menu</span>
+              <button onClick={() => setIsOpen(false)}>
+                <X className="h-7 w-7" />
+              </button>
+            </div>
+
+            {/* Links */}
+            <ul className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 rounded-md text-gray-700 hover:text-[#bd6628e6] hover:bg-gray-100 transition"
+                  className={`text-[17px] px-2 py-2 rounded-md transition 
+                    ${
+                      pathName === link.href
+                        ? "text-[#bd6628] bg-gray-100 font-semibold"
+                        : "text-gray-700 hover:bg-gray-100"
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
+            </ul>
+
+            <div className="text-center text-xs text-gray-500 mt-10">
+              © 2025 Prayagraj Tourism
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 }

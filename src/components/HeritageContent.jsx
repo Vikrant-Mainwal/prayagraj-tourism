@@ -64,7 +64,7 @@ export default function HeritageContent() {
         </div>
 
         {/* Introduction */}
-        <div className="w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-white border border-zinc-200 rounded-xl shadow-lg p-8 md:p-12">
             <p className="text-gray-700  leading-relaxed mb-4 text-lg">
               Prayagraj's heritage is a blend of ancient Hindu traditions,
