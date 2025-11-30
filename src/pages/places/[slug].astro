@@ -1,6 +1,8 @@
 ---
-import { attractions } from "../../data/attraction.js";
 import Layout from "../../layouts/MainLayout.astro";
+import { attractions } from "../../data/attraction.js";
+import AttractionPage from '../../components/AttractionPage.jsx'
+
 export function getStaticPaths() {
   return attractions.map((item) => ({
     params: { slug: item.slug },
@@ -8,25 +10,19 @@ export function getStaticPaths() {
   }));
 }
 
-const { slug } = Astro.params;
+const { place } = Astro.props;
 
-// Find matching place
-const place = attractions.find((p) => p.slug === slug);
-
-if (!place) {
-  throw new Error(`Place not found: ${slug}`);
-}
+const reachText = `
+• Air: Bamrauli Airport connects to major cities.
+• Rail: Prayagraj Junction is one of India's busiest stations.
+• Road: Well-connected via highways to Varanasi, Lucknow, Kanpur.
+Local travel options: autos, e-rickshaws, taxis & app cabs.
+`;
 ---
 
 <Layout title={place.title}>
-  <section class="max-w-5xl mx-auto pt-28 pb-16 px-4">
-    <img src={place.image.src} alt={place.title} class="w-full rounded-xl shadow-lg mb-10" />
 
-    <h1 class="text-4xl font-bold mb-4">{place.title}</h1>
-    <p class="text-lg text-gray-700 mb-3"><b>Location:</b> {place.location}</p>
+ <AttractionPage client:load place={place} howToReach={reachText} />
 
-    <p class="text-gray-600 text-lg mb-8">{place.description}</p>
 
-    <a href="/places" class="text-blue-600 underline">← Back to all attractions</a>
-  </section>
 </Layout>

@@ -1,9 +1,9 @@
 import GallerySlider from "../components/GallerySlider.jsx";
-import Triveni from "../assets/triveni-sangam1.jpg";
+import Triveni from "../assets/sangam1.jpeg";
 import AllahabadFort from "../assets/allahabad-fort.jpg";
-import KhusroBagh from "../assets/khusro-bagh.jpg";
+import KhusroBagh from "../assets/khusro.jpeg";
 import AnandBhavan from "../assets/anand-bhavan.jpg";
-import ChandrashekharAzadPark from "../assets/azad-park.jpg";
+import ChandrashekharAzadPark from "../assets/azad2.jpg";
 import AllahabadMuseum from "../assets/museum.jpg";
 
 export default function GalleryContent() {

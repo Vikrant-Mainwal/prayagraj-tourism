@@ -57,10 +57,8 @@ export default function IndexContent() {
   return (
     <div className="min-h-screen">
 
-      {/* HERO */}
       <Hero />
 
-      {/* ABOUT SECTION */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -73,7 +71,6 @@ export default function IndexContent() {
             </p>
           </div>
 
-          {/* Highlights Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {highlights.map((h, index) => (
               <div
@@ -93,7 +90,6 @@ export default function IndexContent() {
         </div>
       </section>
 
-      {/* FEATURED ATTRACTIONS */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12">
@@ -112,14 +108,12 @@ export default function IndexContent() {
             </a>
           </div>
 
-          {/* Cards */}
           <div className="grid md:grid-cols-3 gap-8">
             {featuredAttractions.map((place, index) => (
               <PlaceCard key={index} {...place} />
             ))}
           </div>
 
-          {/* Mobile Button */}
           <div className="text-center mt-8 sm:hidden">
             <a
               href="/places"
@@ -131,7 +125,6 @@ export default function IndexContent() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-[#bd6628] text-white text-center">
         <div className="max-w-7xl mx-auto px-4">
           <h5 className="text-3xl md:text-4xl font-bold mb-6">
