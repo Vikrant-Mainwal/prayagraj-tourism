@@ -54,9 +54,9 @@ export default function HeritageContent() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
+          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
             Heritage & Culture
-          </h1>
+          </h4>
           <p className="text-lg md:text-xl text-gray-600">
             Explore the architectural masterpieces, cultural treasures, and
             intellectual legacy of Prayagraj.
@@ -66,13 +66,13 @@ export default function HeritageContent() {
         {/* Introduction */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-white border border-zinc-200 rounded-xl shadow-lg p-8 md:p-12">
-            <p className="text-gray-700  leading-relaxed mb-4 text-lg">
+            <p className="text-gray-700  leading-relaxed mb-4 text-lg text-justify md:text-center">
               Prayagraj's heritage is a blend of ancient Hindu traditions,
               Mughal artistry, British colonial architecture, and modern academic
               excellence. Each monument and institution tells a unique story of
               India's cultural and historical journey.
             </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg text-justify md:text-center">
               From ancient stone pillars to grand Mughal tombs and Victorian-era
               churches, Prayagraj presents a timeless blend of artistic and
               architectural wonders.
@@ -92,16 +92,16 @@ export default function HeritageContent() {
                   <category.icon className="h-8 w-8" />
                 </div>
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  <h6 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                     {category.title}
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  </h6>
+                  <p className="text-gray-700 leading-relaxed mb-6 text-justify md:text-start">
                     {category.description}
                   </p>
 
-                  <h3 className="font-semibold text-[#bd6628e6] uppercase text-xs tracking-wider mb-2">
+                  <h5 className="font-semibold text-[#bd6628e6] uppercase text-xs tracking-wider mb-2">
                     Key Highlights
-                  </h3>
+                  </h5>
 
                   <ul className="space-y-2">
                     {category.highlights.map((h, i) => (

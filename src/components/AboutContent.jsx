@@ -56,9 +56,9 @@ export default function AboutContent() {
       <div className="max-w-6xl mx-auto px-4">
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
+          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
             About Prayagraj
-          </h3>
+          </h4>
           <p className="text-lg md:text-xl text-gray-600">
             A sacred confluence of heritage, spirituality, and timeless history.
           </p>
@@ -66,14 +66,14 @@ export default function AboutContent() {
 
         {/* INTRO */}
         <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-8 md:p-12 mb-20 max-w-4xl mx-auto">
-          <p className="text-gray-700 text-lg leading-relaxed mb-6 open-sans-font">
+          <p className="text-gray-700 text-lg leading-relaxed mb-6 open-sans-font text-justify md:text-center">
             Prayagraj, known as Prayag in ancient times and Allahabad during the
             Mughal and British era, is one of India’s most culturally and
             spiritually significant cities. Situated at the confluence of the
             Ganga, Yamuna, and the mythical Saraswati rivers, it has been a
             center of civilization for thousands of years.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-gray-700 text-lg leading-relaxed text-justify md:text-center">
             Its name “Prayag” translates to “the place of sacrifice,”
             symbolizing deep spiritual reverence. From ancient scriptures to
             modern history, Prayagraj has played a pivotal role in shaping the
@@ -92,20 +92,20 @@ export default function AboutContent() {
                 <section.icon className="h-7 w-7" />
               </div>
 
-              <h5 className="text-2xl font-bold text-gray-900 mb-2">
+              <h6 className="text-2xl font-bold text-gray-900 mb-2">
                 {section.title}
-              </h5>
+              </h6>
 
-              <p className="text-gray-700 leading-relaxed">{section.content}</p>
+              <p className="text-gray-700 leading-relaxed text-justify md:text-start">{section.content}</p>
             </div>
           ))}
         </div>
 
         {/* TIMELINE */}
         <div className="max-w-4xl mx-auto">
-          <h4 className="text-3xl font-bold text-center text-gray-900 mb-10">
+          <h5 className="text-3xl font-bold text-center text-gray-900 mb-10">
             Historical Milestones
-          </h4>
+          </h5>
 
           <div className="relative space-y-6">
             <div className="absolute left-[152px] top-3 bottom-0 w-0.5 bg-[#bd6628e6]/40 mx-1 hidden"></div>
@@ -121,7 +121,7 @@ export default function AboutContent() {
 
                 <div className="relative">
                   <div className="w-3 h-3 rounded-full bg-[#bd6628e6] mt-2 relative z-10" />
-                  <div className=" h-10 top-3 bottom-0 w-0.5 bg-[#bd6628e6]/40 mx-1 "/>
+                  {/* <div className=" h-8 top-3 bottom-0 w-0.5 bg-[#bd6628e6]/40 mx-1 "/> */}
                 </div>
 
                 {/* Event */}

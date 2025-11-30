@@ -65,9 +65,9 @@ export default function AttractionsContent() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
             Top Attractions in Prayagraj
-          </h1>
+          </h4>
           <p className="text-lg md:text-xl text-gray-600">
             Explore iconic monuments, sacred sites, and cultural landmarks.
           </p>
@@ -82,7 +82,7 @@ export default function AttractionsContent() {
 
         {/* Tips Section */}
         <div className="mt-20 max-w-4xl mx-auto bg-white border border-zinc-200 rounded-lg shadow p-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Visiting Tips</h2>
+          <h5 className="text-2xl font-bold text-gray-900 mb-4">Visiting Tips</h5>
 
           <ul className="space-y-3 text-gray-600">
             <li>• Best time to visit: October to March for pleasant weather</li>

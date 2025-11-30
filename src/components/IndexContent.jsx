@@ -8,6 +8,7 @@ import KhusroBagh from "../assets/khusro-bagh.jpg";
 export default function IndexContent() {
   const featuredAttractions = [
     {
+      slug: "triveni-sangam",
       title: "Triveni Sangam",
       description:
         "The sacred confluence of the Ganga, Yamuna and mystical Saraswati. A pilgrimage site of immense spiritual significance.",
@@ -16,6 +17,7 @@ export default function IndexContent() {
       location: "Sangam Area",
     },
     {
+      slug: "allahabad-fort",
       title: "Allahabad Fort",
       description:
         "A magnificent Mughal fort built by Emperor Akbar in 1583. Home to the Ashoka Pillar and Akshayavat tree.",
@@ -24,6 +26,7 @@ export default function IndexContent() {
       location: "Near Sangam",
     },
     {
+      slug: "khusro-bagh",
       title: "Khusro Bagh",
       description:
         "A stunning Mughal garden complex with historic tombs and breathtaking sandstone carvings.",
@@ -61,9 +64,9 @@ export default function IndexContent() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Discover Prayagraj
-            </h2>
+            </h4>
             <p className="text-lg text-gray-600 leading-relaxed">
               One of India’s oldest and most sacred cities, located at the meeting
               point of holy rivers and known for its cultural and spiritual legacy.
@@ -80,9 +83,9 @@ export default function IndexContent() {
                 <div className="w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-red-100 text-[#bd6628e6] mb-4">
                   <h.icon className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                <h6 className="text-xl font-semibold mb-2 text-gray-900">
                   {h.title}
-                </h3>
+                </h6>
                 <p className="text-gray-600">{h.description}</p>
               </div>
             ))}
@@ -95,9 +98,9 @@ export default function IndexContent() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12">
             <div className="text-center sm:text-left">
-              <h2 className="text-4xl font-bold text-gray-900 mb-2">
+              <h5 className="text-4xl font-bold text-gray-900 mb-2">
                 Featured Attractions
-              </h2>
+              </h5>
               <p className="text-gray-600">Must-visit places in Prayagraj</p>
             </div>
 
@@ -131,9 +134,9 @@ export default function IndexContent() {
       {/* CTA Section */}
       <section className="py-20 bg-[#bd6628] text-white text-center">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h5 className="text-3xl md:text-4xl font-bold mb-6">
             Plan Your Visit to Prayagraj
-          </h2>
+          </h5>
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
             Explore ancient monuments, walk along the Sangam, and experience the
             spiritual heart of India.

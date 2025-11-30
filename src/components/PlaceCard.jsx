@@ -14,9 +14,9 @@ export default function PlaceCard({ title, description, image, location,slug }) 
         </div>
 
         <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 group-hover:text-[#bd6628e6] transition-colors">
+          <h5 className="text-xl font-bold mb-2 group-hover:text-[#bd6628e6] transition-colors">
             {title}
-          </h3>
+          </h5>
 
           {location && (
             <div className="flex items-center text-sm text-gray-500 mb-3">

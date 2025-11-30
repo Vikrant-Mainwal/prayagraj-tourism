@@ -30,9 +30,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="text-center md:text-start">
-            <h3 className="text-lg font-semibold text-foreground mb-4 text-white">
+            <h5 className="text-lg font-semibold text-foreground mb-4 text-white">
               Contact Us
-            </h3>
+            </h5>
             <div className="space-y-3 text-white flex flex-col items-center">
               <div className="space-y-3">
                 <div className="flex items-start space-x-3 text-sm">
@@ -59,9 +59,9 @@ const Footer = () => {
 
           {/* Quick Links & Social */}
           <div className="text-white text-center md:text-start">
-            <h3 className="text-lg font-semibold text-foreground mb-4">
+            <h5 className="text-lg font-semibold text-foreground mb-4">
               Connect With Us
-            </h3>
+            </h5>
             <div className="flex space-x-4 mb-6 justify-center">
               <a
                 href="#"

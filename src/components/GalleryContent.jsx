@@ -46,9 +46,9 @@ export default function GalleryContent() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
             Photo Gallery
-          </h1>
+          </h4>
           <p className="text-lg md:text-xl text-gray-600">
             Experience Prayagraj through stunning images of its heritage and beauty.
           </p>
@@ -60,9 +60,9 @@ export default function GalleryContent() {
         </div>
 
         {/* Grid Gallery */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h5 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Explore More Images
-        </h2>
+        </h5>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {galleryImages.map((image, index) => (

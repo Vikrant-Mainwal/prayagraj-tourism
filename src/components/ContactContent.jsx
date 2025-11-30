@@ -55,9 +55,9 @@ export default function ContactContent() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
             Contact Us
-          </h1>
+          </h4>
           <p className="text-lg md:text-xl text-gray-600">
             We'd love to help you plan your perfect trip to Prayagraj.
           </p>
@@ -67,7 +67,7 @@ export default function ContactContent() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-white rounded-xl border border-zinc-200 shadow p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+              <h5 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h5>
 
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex gap-4 mb-6">
@@ -76,7 +76,7 @@ export default function ContactContent() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <h5 className="text-lg font-semibold">{item.title}</h5>
                     {item.details.map((line, i) => (
                       <p key={i} className="text-gray-600 text-sm">
                         {line}
@@ -89,7 +89,7 @@ export default function ContactContent() {
 
             {/* Tips */}
             <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
-              <h3 className="font-semibold mb-3 text-gray-900">Before You Visit</h3>
+              <h5 className="font-semibold mb-3 text-gray-900">Before You Visit</h5>
               <ul className="text-gray-700 space-y-2 text-sm">
                 <li>• Check weather & river conditions</li>
                 <li>• Book hotels in advance during peak seasons</li>
@@ -102,9 +102,9 @@ export default function ContactContent() {
           {/* Contact Form */}
           <div>
             <div className="bg-white rounded-xl border border-zinc-200 shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h5 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Us a Message
-              </h2>
+              </h5>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
