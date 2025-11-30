@@ -1,10 +1,4 @@
 import PlaceCard from "../components/PlaceCard.jsx";
-import Triveni from "../assets/triveni-sangam1.jpg";
-import AllahabadFort from "../assets/allahabad-fort.jpg";
-import KhusroBagh from "../assets/khusro-bagh.jpg";
-import AnandBhavan from "../assets/anand-bhavan.jpg";
-import ChandrashekharAzadPark from "../assets/azad-park.jpg";
-import AllahabadMuseum from "../assets/museum.jpg";
 import { attractions } from "../data/attraction.js";
 
 export default function AttractionsContent() {

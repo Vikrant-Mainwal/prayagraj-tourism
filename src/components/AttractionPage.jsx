@@ -11,10 +11,10 @@ export default function AttractionPage({ place, howToReach }) {
   return (
     <div>
       <div className="relative w-full mx-auto mb-10 rounded-xl shadow-lg">
-        <h5 className="absolute top-10 left-1/2 -translate-x-1/2 text-white text-6xl font-bold drop-shadow-lg">
+        <h5 className="absolute w-full top-20 md:top-10 left-1/2 -translate-x-1/2 text-white text-center text-2xl md:text-6xl font-bold drop-shadow-lg">
           {place.title}
         </h5>
-        <p className="absolute top-24 left-1/2 -translate-x-1/2 text-white text-4xl font-bold drop-shadow-lg">Prayagraj</p>
+        <p className="absolute top-30 md:top-24 left-1/2 -translate-x-1/2 text-white text-1xl font-bold drop-shadow-lg">Prayagraj</p>
         <img
           src={place.image.src}
           alt={place.title}

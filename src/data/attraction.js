@@ -1,8 +1,8 @@
 import Triveni from "../assets/triveni-sangam1.jpg";
 import AllahabadFort from "../assets/allahabad-fort.jpg";
-import KhusroBagh from "../assets/khusro-bagh.jpg";
-import AnandBhavan from "../assets/anand-bhavan.jpg";
-import AzadPark from "../assets/azad-park.jpg";
+import KhusroBagh from "../assets/khusro.jpeg";
+import AnandBhavan from "../assets/anand1.jpg";
+import AzadPark from "../assets/azad1.jpg";
 import AllahabadMuseum from "../assets/museum.jpg";
 
 export const attractions = [
