@@ -66,7 +66,7 @@ export default function ContactContent() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white rounded-xl border shadow p-8">
+            <div className="bg-white rounded-xl border border-zinc-200 shadow p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
 
               {contactInfo.map((item, index) => (
@@ -101,7 +101,7 @@ export default function ContactContent() {
 
           {/* Contact Form */}
           <div>
-            <div className="bg-white rounded-xl border shadow p-8">
+            <div className="bg-white rounded-xl border border-zinc-200 shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Us a Message
               </h2>
@@ -115,7 +115,8 @@ export default function ContactContent() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full border px-4 py-2 rounded-lg"
+                    className="w-full border border-zinc-200 px-4 py-2 rounded-lg"
+                    placeholder="Your Name"
                   />
                 </div>
 
@@ -127,7 +128,9 @@ export default function ContactContent() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full border px-4 py-2 rounded-lg"
+                    className="w-full border border-zinc-200 px-4 py-2 rounded-lg"
+                    placeholder="your@email.com"
+
                   />
                 </div>
 
@@ -139,7 +142,8 @@ export default function ContactContent() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full border px-4 py-2 rounded-lg"
+                    className="w-full border border-zinc-200 px-4 py-2 rounded-lg"
+                    placeholder="What is this regarding?"
                   />
                 </div>
 
@@ -150,7 +154,8 @@ export default function ContactContent() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full border px-4 py-2 rounded-lg min-h-[150px]"
+                    className="w-full border border-zinc-200 px-4 py-2 rounded-lg min-h-[150px]"
+                    placeholder="Tell us how we can help..."
                   />
                 </div>
 

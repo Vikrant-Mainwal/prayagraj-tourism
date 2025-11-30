@@ -37,21 +37,21 @@ export default function AboutContent() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-16 bg-white">
+    <div className="min-h-screen pt-14 pb-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
             About Prayagraj
-          </h1>
+          </h3>
           <p className="text-lg md:text-xl text-gray-600">
             A sacred confluence of heritage, spirituality, and timeless history.
           </p>
         </div>
 
         {/* INTRO */}
-        <div className="bg-white border rounded-lg shadow p-8 md:p-12 mb-20">
+        <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-8 md:p-12 mb-20 w-4xl mx-auto">
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Prayagraj, known as Prayag in ancient times and Allahabad during the Mughal and British era, is one of India’s most culturally and spiritually significant cities. Situated at the confluence of the Ganga, Yamuna, and the mythical Saraswati rivers, it has been a center of civilization for thousands of years.
           </p>
@@ -65,15 +65,15 @@ export default function AboutContent() {
           {sections.map((section, i) => (
             <div
               key={i}
-              className="bg-white border rounded-lg p-8 shadow-md hover:shadow-xl transition"
+              className="bg-white border border-zinc-200 rounded-lg p-8 shadow-md hover:shadow-xl transition"
             >
               <div className="w-14 h-14 flex items-center justify-center rounded-full bg-red-100 text-[#bd6628e6] mb-6">
                 <section.icon className="h-7 w-7" />
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h5 className="text-2xl font-bold text-gray-900 mb-2">
                 {section.title}
-              </h3>
+              </h5>
 
               <p className="text-gray-700 leading-relaxed">
                 {section.content}
@@ -84,9 +84,9 @@ export default function AboutContent() {
 
         {/* TIMELINE */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+          <h4 className="text-3xl font-bold text-center text-gray-900 mb-10">
             Historical Milestones
-          </h2>
+          </h4>
 
           <div className="space-y-6">
             {milestones.map((m, i) => (

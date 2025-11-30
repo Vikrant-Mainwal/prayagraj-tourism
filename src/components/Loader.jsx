@@ -15,13 +15,18 @@ export default function Loader() {
       }`}
     >
       <div className="flex flex-col items-center gap-4">
-        {/* Spinner */}
         <div className="w-12 h-12 border-4 border-[#bd6628e6] border-t-transparent rounded-full animate-spin"></div>
 
-        {/* Text */}
-        <h2 className="text-xl font-semibold text-gray-800">
+        <h6
+          className="text-xl font-semibold text-gray-800 typing-effect"
+          style={{
+            "--typing-width": "17ch",
+            "--steps": 17,
+            "--typing-speed": "5s",
+          }}
+        >
           Loading Prayagraj...
-        </h2>
+        </h6>
       </div>
     </div>
   );

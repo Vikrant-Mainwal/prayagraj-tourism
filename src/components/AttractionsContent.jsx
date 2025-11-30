@@ -80,15 +80,15 @@ export default function AttractionsContent() {
         </div>
 
         {/* Tips Section */}
-        <div className="mt-20 max-w-4xl mx-auto bg-white border rounded-lg shadow p-10">
+        <div className="mt-20 max-w-4xl mx-auto bg-white border border-zinc-200 rounded-lg shadow p-10">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Visiting Tips</h2>
 
           <ul className="space-y-3 text-gray-600">
-            <li>• Best time: October to March</li>
-            <li>• Early mornings are ideal for Sangam</li>
-            <li>• Dress modestly at religious sites</li>
-            <li>• Hire local guides at major sites</li>
-            <li>• Plan 2–3 days for a full city tour</li>
+            <li>• Best time to visit: October to March for pleasant weather</li>
+            <li>• Early mornings are ideal for visiting Sangam and temples</li>
+            <li>• Dress modestly when visiting religious sites</li>
+            <li>• Hire local guides at major attractions for deeper insights</li>
+            <li>• Allow 2-3 days to comfortably explore all major sites</li>
           </ul>
         </div>
 

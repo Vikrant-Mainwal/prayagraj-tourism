@@ -75,7 +75,7 @@ export default function IndexContent() {
             {highlights.map((h, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-lg border bg-white shadow hover:shadow-lg transition"
+                className="text-center p-6 rounded-lg border border-zinc-200 bg-white shadow hover:shadow-lg transition"
               >
                 <div className="w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-red-100 text-[#bd6628e6] mb-4">
                   <h.icon className="h-8 w-8" />

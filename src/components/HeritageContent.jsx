@@ -49,12 +49,12 @@ export default function HeritageContent() {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-16 bg-white">
+    <div className="min-h-screen pt-14 pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
             Heritage & Culture
           </h1>
           <p className="text-lg md:text-xl text-gray-600">
@@ -64,15 +64,15 @@ export default function HeritageContent() {
         </div>
 
         {/* Introduction */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white border rounded-xl shadow p-8 md:p-12">
-            <p className="text-gray-700 leading-relaxed mb-4">
+        <div className="w-4xl mx-auto mb-16">
+          <div className="bg-white border border-zinc-200 rounded-xl shadow-lg p-8 md:p-12">
+            <p className="text-gray-700  leading-relaxed mb-4 text-lg">
               Prayagraj's heritage is a blend of ancient Hindu traditions,
               Mughal artistry, British colonial architecture, and modern academic
               excellence. Each monument and institution tells a unique story of
               India's cultural and historical journey.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed text-lg">
               From ancient stone pillars to grand Mughal tombs and Victorian-era
               churches, Prayagraj presents a timeless blend of artistic and
               architectural wonders.
@@ -85,7 +85,7 @@ export default function HeritageContent() {
           {heritageCategories.map((category, index) => (
             <div
               key={index}
-              className="border rounded-xl bg-white shadow p-8 md:p-12 hover:shadow-xl transition"
+              className="border border-zinc-200 rounded-xl bg-white shadow p-8 md:p-12 hover:shadow-xl transition"
             >
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-full bg-red-100 text-[#bd6628e6] flex items-center justify-center">
@@ -125,13 +125,10 @@ export default function HeritageContent() {
               Cultural Significance
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              In 2017, Prayagraj's Kumbh Mela was inscribed on UNESCO’s
-              Representative List of Intangible Cultural Heritage of Humanity,
-              acknowledging its spiritual, cultural, and social importance.
+              Prayagraj's Kumbh Mela was inscribed on UNESCO's Representative List of Intangible Cultural Heritage of Humanity in 2017, recognizing its exceptional universal value and contribution to world heritage.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              From ancient civilization to modern development, Prayagraj continues
-              to preserve and celebrate its rich heritage.
+             The city continues to play a vital role in preserving India's cultural heritage while adapting to modern times, making it a living museum where past and present coexist harmoniously.
             </p>
           </div>
         </div>
