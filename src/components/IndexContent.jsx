@@ -94,7 +94,7 @@ export default function IndexContent() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12">
-            <div>
+            <div className="text-center sm:text-left">
               <h2 className="text-4xl font-bold text-gray-900 mb-2">
                 Featured Attractions
               </h2>
@@ -103,7 +103,7 @@ export default function IndexContent() {
 
             <a
               href="/places"
-              className="mt-4 sm:mt-0 inline-flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100 transition"
+              className="mt-4 sm:mt-0 hidden md:inline-flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100 transition "
             >
               View All <ChevronRight className="h-4 w-4" />
             </a>

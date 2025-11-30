@@ -35,6 +35,13 @@ export default function Navbar() {
     if (isOpen) document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
+  
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <nav className="w-full h-[90px] fixed top-0 z-50 bg-white shadow-md">
@@ -82,45 +89,49 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 md:hidden">
-          <div
-            ref={menuRef}
-            className="absolute top-0 right-0 bg-white w-[80vw] max-w-[300px] h-screen shadow-xl
-                       p-6 flex flex-col justify-between animate-slide-left"
-          >
-            {/* Header */}
-            <div className="flex justify-between items-center mb-8">
-              <span className="text-2xl font-bold text-[#bd6628]">Menu</span>
-              <button onClick={() => setIsOpen(false)}>
-                <X className="h-7 w-7" />
-              </button>
-            </div>
+  <div className="fixed inset-0 bg-black/50 z-40 md:hidden">
+    <div
+      ref={menuRef}
+      className="absolute top-0 right-0 bg-white w-[80vw] max-w-[300px] h-screen shadow-xl
+                 p-6 flex flex-col animate-slide-left"
+    >
+      {/* Header */}
+      <div className="flex justify-between items-center mb-6">
+        <span className="text-2xl font-bold text-[#bd6628]">Menu</span>
+        <button onClick={() => setIsOpen(false)}>
+          <X className="h-7 w-7" />
+        </button>
+      </div>
 
-            {/* Links */}
-            <ul className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`text-[17px] px-2 py-2 rounded-md transition 
-                    ${
-                      pathName === link.href
-                        ? "text-[#bd6628] bg-gray-100 font-semibold"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </ul>
+      {/* Menu list */}
+      <div className="flex-1 overflow-y-auto p-5">
+        <ul className="flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className={`text-[17px] px-2 py-2 rounded-md transition 
+                ${
+                  pathName === link.href
+                    ? "text-[#bd6628] bg-gray-100 font-semibold"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </ul>
+      </div>
 
-            <div className="text-center text-xs text-gray-500 mt-10">
-              © 2025 Prayagraj Tourism
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Footer sticks at bottom */}
+      <div className="mt-6 text-center text-xs text-gray-500">
+        © 2025 Prayagraj Tourism
+      </div>
+    </div>
+  </div>
+)}
+
     </nav>
   );
 }

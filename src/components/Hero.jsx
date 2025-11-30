@@ -3,7 +3,7 @@ import Triveni from "../assets/triveni-sangam1.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative h-[700px] md:h-[600px] w-full">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

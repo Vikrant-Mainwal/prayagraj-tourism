@@ -29,17 +29,31 @@ export default function AboutContent() {
   ];
 
   const milestones = [
-    { period: "Ancient Era", event: "Mentioned in Vedic texts as Prayag, site of sacred confluence" },
-    { period: "1583 CE", event: "Emperor Akbar built the magnificent Allahabad Fort" },
-    { period: "1858", event: "Became important center during British colonial period" },
-    { period: "1920s–40s", event: "Key location in the Indian independence movement" },
-    { period: "2018", event: "Renamed officially to Prayagraj, restoring its ancient identity" },
+    {
+      period: "Ancient Era",
+      event: "Mentioned in Vedic texts as Prayag, site of sacred confluence",
+    },
+    {
+      period: "1583 CE",
+      event: "Emperor Akbar built the magnificent Allahabad Fort",
+    },
+    {
+      period: "1858",
+      event: "Became important center during British colonial period",
+    },
+    {
+      period: "1920s–40s",
+      event: "Key location in the Indian independence movement",
+    },
+    {
+      period: "2018",
+      event: "Renamed officially to Prayagraj, restoring its ancient identity",
+    },
   ];
 
   return (
     <div className="min-h-screen pt-14 pb-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        
         {/* HEADER */}
         <div className="text-center mb-16">
           <h3 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
@@ -53,10 +67,17 @@ export default function AboutContent() {
         {/* INTRO */}
         <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-8 md:p-12 mb-20 max-w-4xl mx-auto">
           <p className="text-gray-700 text-lg leading-relaxed mb-6 open-sans-font">
-            Prayagraj, known as Prayag in ancient times and Allahabad during the Mughal and British era, is one of India’s most culturally and spiritually significant cities. Situated at the confluence of the Ganga, Yamuna, and the mythical Saraswati rivers, it has been a center of civilization for thousands of years.
+            Prayagraj, known as Prayag in ancient times and Allahabad during the
+            Mughal and British era, is one of India’s most culturally and
+            spiritually significant cities. Situated at the confluence of the
+            Ganga, Yamuna, and the mythical Saraswati rivers, it has been a
+            center of civilization for thousands of years.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Its name “Prayag” translates to “the place of sacrifice,” symbolizing deep spiritual reverence. From ancient scriptures to modern history, Prayagraj has played a pivotal role in shaping the cultural, religious, and intellectual fabric of India.
+            Its name “Prayag” translates to “the place of sacrifice,”
+            symbolizing deep spiritual reverence. From ancient scriptures to
+            modern history, Prayagraj has played a pivotal role in shaping the
+            cultural, religious, and intellectual fabric of India.
           </p>
         </div>
 
@@ -75,9 +96,7 @@ export default function AboutContent() {
                 {section.title}
               </h5>
 
-              <p className="text-gray-700 leading-relaxed">
-                {section.content}
-              </p>
+              <p className="text-gray-700 leading-relaxed">{section.content}</p>
             </div>
           ))}
         </div>
@@ -88,10 +107,11 @@ export default function AboutContent() {
             Historical Milestones
           </h4>
 
-          <div className="space-y-6">
+          <div className="relative space-y-6">
+            <div className="absolute left-[152px] top-3 bottom-0 w-0.5 bg-[#bd6628e6]/40 mx-1 hidden"></div>
+
             {milestones.map((m, i) => (
               <div key={i} className="flex gap-6 items-start">
-                
                 {/* Year */}
                 <div className="w-32 text-right">
                   <span className="text-sm font-semibold text-[#bd6628e6]">
@@ -99,19 +119,19 @@ export default function AboutContent() {
                   </span>
                 </div>
 
-                {/* Dot */}
-                <div className="w-3 h-3 rounded-full bg-[#bd6628e6] mt-2" />
+                <div className="relative">
+                  <div className="w-3 h-3 rounded-full bg-[#bd6628e6] mt-2 relative z-10" />
+                  <div className=" h-10 top-3 bottom-0 w-0.5 bg-[#bd6628e6]/40 mx-1 "/>
+                </div>
 
                 {/* Event */}
                 <div className="flex-1">
                   <p className="text-gray-700">{m.event}</p>
                 </div>
-
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );
