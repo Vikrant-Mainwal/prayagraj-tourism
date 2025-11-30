@@ -14,7 +14,7 @@ export default function AttractionPage({ place, howToReach }) {
         <h5 className="absolute w-full top-20 md:top-10 left-1/2 -translate-x-1/2 text-white text-center text-2xl md:text-6xl font-bold drop-shadow-lg">
           {place.title}
         </h5>
-        <p className="absolute top-30 md:top-24 left-1/2 -translate-x-1/2 text-white text-1xl font-bold drop-shadow-lg">Prayagraj</p>
+        <p className="absolute top-30 md:top-24 left-1/2 -translate-x-1/2 text-white text-1xl md:text-4xl font-bold drop-shadow-lg">Prayagraj</p>
         <img
           src={place.image.src}
           alt={place.title}
@@ -29,19 +29,19 @@ export default function AttractionPage({ place, howToReach }) {
           <b>Location:</b> {place.location}
         </p>
 
-        <p className="text-gray-600 text-lg leading-relaxed text-center max-w-4xl mx-auto mb-10">
+        <p className="text-gray-600 text-lg leading-relaxed text-justify max-w-4xl mx-auto mb-10 md:text-center">
           {place.description}
         </p>
       </div>
 
       {/* CTA */}
       <section className="text-center my-10">
-        <h3 className="text-2xl font-semibold mb-6">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-6">
           I WISH TO VISIT {place.title.toUpperCase()}
         </h3>
 
         <a
-          href="/plan-trip"
+          href="/contact"
           className="bg-[#e96a1a] text-white px-12 py-4 rounded-full text-xl tracking-wide hover:bg-[#d45f15] transition"
         >
           PLAN YOUR TRIP
@@ -49,7 +49,7 @@ export default function AttractionPage({ place, howToReach }) {
       </section>
 
       <div className="py-16 rounded-xl max-w-5xl mx-auto my-10 px-4">
-        <h5 className="text-3xl font-semibold text-center mb-6 tracking-wide">
+        <h5 className="text-2xl md:text-3xl font-semibold text-center mb-6 tracking-wide">
           HOW TO REACH HERE
         </h5>
 
@@ -60,7 +60,7 @@ export default function AttractionPage({ place, howToReach }) {
       </div>
 
       <div className="mt-24 mb-24">
-        <h5 className="text-3xl font-semibold text-center mb-10 tracking-wide">
+        <h5 className="text-2xl md:text-3xl font-semibold text-center mb-10 tracking-wide">
           PLACES TO VISIT NEAR PRAYAGRAJ
         </h5>
 

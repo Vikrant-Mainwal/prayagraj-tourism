@@ -56,10 +56,10 @@ export default function AboutContent() {
       <div className="max-w-6xl mx-auto px-4">
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h4 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
+          <h4 className="text-3xl md:text-6xl font-bold text-gray-900 mb-4 cinzel-font">
             About Prayagraj
           </h4>
-          <p className="text-lg md:text-xl text-gray-600">
+          <p className="text-lg md:text-xl text-gray-600 mx-3">
             A sacred confluence of heritage, spirituality, and timeless history.
           </p>
         </div>

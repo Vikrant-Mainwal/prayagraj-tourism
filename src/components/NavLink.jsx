@@ -4,7 +4,13 @@ export default function NavLink({ href, children }) {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setIsActive(window.location.pathname === href);
+    const currentPath = window.location.pathname;
+
+    if(href === '/'){
+      setIsActive(currentPath === href);
+    }else{
+      setIsActive(currentPath.startsWith(href));
+    }
   }, []);
 
   return (

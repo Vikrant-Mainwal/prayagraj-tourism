@@ -21,7 +21,7 @@ const Footer = () => {
             <h5 className="text-xl font-bold text-primary mb-4 text-white">
               Prayagraj Tourism
             </h5>
-            <p className="text-muted-foreground text-sm leading-relaxed text-white px-5">
+            <p className="text-muted-foreground text-sm leading-relaxed text-white px-5 md:px-0">
               Discover the spiritual and cultural heritage of Prayagraj, one of
               India's most sacred cities. Experience the confluence of history,
               faith, and tradition.
@@ -33,7 +33,7 @@ const Footer = () => {
             <h5 className="text-lg font-semibold text-foreground mb-4 text-white">
               Contact Us
             </h5>
-            <div className="space-y-3 text-white flex flex-col items-center">
+            <div className="space-y-3 text-white flex flex-col items-center md:items-start">
               <div className="space-y-3">
                 <div className="flex items-start space-x-3 text-sm">
                   <MapPin className="h-5 w-5 text-primary shrink-0 text-[#bd6628e6] mt-0.5" />
@@ -62,7 +62,7 @@ const Footer = () => {
             <h5 className="text-lg font-semibold text-foreground mb-4">
               Connect With Us
             </h5>
-            <div className="flex space-x-4 mb-6 justify-center">
+            <div className="flex space-x-4 mb-6 justify-center md:justify-start">
               <a
                 href="#"
                 className="h-10 w-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-200"
