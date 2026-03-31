@@ -1,43 +1,116 @@
-# Astro Starter Kit: Minimal
+# 🕌 Prayagraj Tourism
 
-```sh
-npm create astro@latest -- --template minimal
+A modern, responsive tourism website for **Prayagraj** — the city of the sacred Triveni Sangam and the world's largest human gathering, the Maha Kumbh Mela. Built with [Astro](https://astro.build) and styled using [Tailwind CSS](https://tailwindcss.com).
+
+🌐 **Live Site:** [prayagraj-tourism.vercel.app](https://prayagraj-tourism.vercel.app)
+
+---
+
+## ✨ Features
+
+- 🏛️ Highlights iconic landmarks, religious sites, and tourist attractions of Prayagraj
+- ⚡ Lightning-fast performance powered by Astro's static-site architecture
+- 📱 Fully responsive design with Tailwind CSS
+- 🎨 Clean, modern UI for an engaging visitor experience
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Astro](https://astro.build) | Static site framework |
+| [Tailwind CSS](https://tailwindcss.com) | Styling |
+| [TypeScript](https://www.typescriptlang.org) | Type safety |
+| [Vercel](https://vercel.com) | Deployment |
+
+---
+
+## 📁 Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+prayagraj-tourism/
+├── public/           # Static assets (images, fonts, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/   # Reusable UI components
+│   └── pages/        # Route-based Astro pages
+├── astro.config.mjs  # Astro configuration
+├── tailwind.config.mjs # Tailwind CSS configuration
+├── tsconfig.json     # TypeScript configuration
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Getting Started
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Prerequisites
 
-## 🧞 Commands
+- [Node.js](https://nodejs.org) v18 or higher
+- npm
 
-All commands are run from the root of the project, from a terminal:
+### Installation
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+# Clone the repository
+git clone https://github.com/Vikrant-Mainwal/prayagraj-tourism.git
 
-## 👀 Want to learn more?
+# Navigate to the project directory
+cd prayagraj-tourism
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start the local dev server at http://localhost:4321
+npm run dev
+```
+
+### Build & Preview
+
+```bash
+# Build for production
+npm run build
+
+# Preview the production build locally
+npm run preview
+```
+
+---
+
+## Available Scripts
+
+| Command | Action |
+|---|---|
+| `npm run dev` | Start local dev server at `localhost:4321` |
+| `npm run build` | Build the production site to `./dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run astro ...` | Run Astro CLI commands |
+
+---
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+---
+
+## 👨‍💻 Author
+
+**Vikrant Mainwal**
+- GitHub: [@Vikrant-Mainwal](https://github.com/Vikrant-Mainwal)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
